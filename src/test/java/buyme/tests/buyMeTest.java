@@ -24,7 +24,7 @@ import java.util.concurrent.TimeUnit;
 public class buyMeTest {
 
     String name = "asaf";
-    String mail = "sio.asaf@gmail.com";
+    String mail = "asafravhe@gmail.com";
     String password = "A162534a";
     private static WebDriverWait wait;
     private static ExtentReports extent;
@@ -143,7 +143,7 @@ public class buyMeTest {
 
             senderReceiverScreen.uploadPhoto();
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[gtm=המשך]")));
-         //   senderReceiverScreen.pressContinue();
+           senderReceiverScreen.pressContinue();
             test.log(Status.PASS, "Receiver details entered successfully");
         } catch (Exception e) {
             e.printStackTrace();
@@ -151,12 +151,13 @@ public class buyMeTest {
         }
     }
 
- //   @Test(priority = 5)
+    @Test(priority = 5)
     public void enterHowToSend() {
         try {
-            String senderName = "tomkaro78@gmail.com";
+            String senderName = "dgotlieb8@gmail.com";
 
-         //   howToSendPage.sendByMail();
+        //    howToSendPage.sendByMail();
+            howToSendPage.sendBySMS();
             howToSendPage.enterSenderName();
             howToSendPage.paymentSubmit();
             String senderNameElement = driver.findElement(By.cssSelector("input[placeholder=\"שם שולח המתנה\"]")).getText();
@@ -168,7 +169,6 @@ public class buyMeTest {
 
         }
     }
-
 
     @AfterClass
     public static void afterClass() {

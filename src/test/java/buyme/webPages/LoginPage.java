@@ -28,9 +28,9 @@ public class LoginPage extends BasePage {
 
     private void enterCredentials() {
         sendKeysToElement(By.className("ember-text-field"), "tom");
-        sendKeysToElement(By.cssSelector("input[placeholder = מייל]"), "hgf667@gmail.com");
-        sendKeysToElement(By.cssSelector("input[placeholder = סיסמה]"), "tomkKk78905");
-        sendKeysToElement(By.cssSelector("input[placeholder=\"אימות סיסמה\"]"), "tomkKk78905");
+        sendKeysToElement(By.cssSelector("input[placeholder = מייל]"), "asafravhe@gmail.com");
+        sendKeysToElement(By.cssSelector("input[placeholder = סיסמה]"), "asaf");
+        sendKeysToElement(By.cssSelector("input[placeholder=\"אימות סיסמה\"]"), "A162534a");
     }
 
     public void confirmRegister() {
@@ -39,7 +39,7 @@ public class LoginPage extends BasePage {
 
     public void submitLogin() {
         clickElement(By.className("seperator-link"));
-        sendKeysToElement(By.xpath("//*[@id=\"ember1451\"]"), "sio.asaf@gmail.com");
+        sendKeysToElement(By.xpath("//*[@id=\"ember1451\"]"), "asafravhe@gmail.com");
         sendKeysToElement(By.xpath("//*[@id=\"ember1451\"]"), String.valueOf(Keys.TAB));
         sendKeysToElement(By.cssSelector("input[placeholder=\"סיסמה\""),"A162534a");
         clickElement(By.cssSelector("button[type = submit]"));
