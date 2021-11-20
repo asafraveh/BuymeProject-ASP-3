@@ -33,7 +33,7 @@ public class buyMeTest {
 
     LoginPage loginPage = new LoginPage();
     MainScreen mainScreen = new MainScreen();
-    PickBusiness pickBusiness = new PickBusiness();
+ //   PickBusiness pickBusiness = new PickBusiness();
     SenderReceiverScreen senderReceiverScreen = new SenderReceiverScreen();
     HowToSendPage howToSendPage = new HowToSendPage();
 

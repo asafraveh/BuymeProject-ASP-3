@@ -1,7 +1,9 @@
 package buyme.base;
 
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.w3c.dom.Document;
 import buyme.tests.buyMeTest;
@@ -26,7 +28,10 @@ public class DriverSingleton {
     System.setProperty("webdriver.chrome.driver",  "C:\\Users\\sioas\\Desktop\\drivers\\chromedriver.exe");
 //    ChromeOptions chromeOptions = new ChromeOptions();
 //    chromeOptions.addArguments("--headless");
-               driver = new ChromeDriver();
+               //  driver = new ChromeDriver();
+               ChromeOptions options = new ChromeOptions();
+               options.addArguments("-incognito");
+               driver = new ChromeDriver(options);
             }else if(type.equals("FF")){
                System.setProperty("webdriver.firefox.driver", "C:\\Users\\sioas\\Desktop\\drivers\\geckodriver.exe");
                driver = new FirefoxDriver();
@@ -46,4 +51,5 @@ public class DriverSingleton {
         doc.getDocumentElement().normalize();
         return doc.getElementsByTagName(keyName).item(0).getTextContent();
     }
+
 }
