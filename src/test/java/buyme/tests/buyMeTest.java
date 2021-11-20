@@ -159,6 +159,7 @@ public class buyMeTest {
         //    howToSendPage.sendByMail();
             howToSendPage.sendBySMS();
             howToSendPage.enterSenderName();
+            howToSendPage.senderphonnumber();
             howToSendPage.paymentSubmit();
             String senderNameElement = driver.findElement(By.cssSelector("input[placeholder=\"שם שולח המתנה\"]")).getText();
             Assert.assertEquals(senderNameElement, senderName);
